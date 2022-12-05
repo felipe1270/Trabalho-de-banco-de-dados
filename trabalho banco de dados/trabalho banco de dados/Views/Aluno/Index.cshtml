@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Login Aluno";
+}
+@model List<Aluno>
+<a class="btn btn-primary" asp-controller="Aluno" asp-action="Cadastrar">Cadastrar novo aluno</a>
+<div class="text-center">
+
+    <h1 class="display-4">Pesquisar aluno</h1>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Digite seu nome aqui" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-primary">Buscar </button>
+        </div>
+    </div>
+    <div class="list-group">
+        @if(Model != null && Model.Any())
+        {
+            foreach (Aluno aluno in Model)
+            {
+                <a type="button" class="list-group-item list-group-item-action" asp-controller="Aluno" asp-action="AlunoInicio" asp-route-id="@aluno.AlunoId">@aluno.Nome</a>
+            }
+        }
+        
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Aluno";
+}
+<a class="btn btn-primary" asp-controller="Grupo" asp-action="Index">Criar Grupo </a>
+<div class="text-center">
+
+    <h1 class="display-4">Selecionar Tema</h1>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Digite para buscar tema" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-primary">Buscar </button>
+        </div>
+    </div>
+    <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action">
+            Tema1
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">Tema2</button>
+        <button type="button" class="list-group-item list-group-item-action">Tema3</button>
+        <button type="button" class="list-group-item list-group-item-action">Tema4</button>
+        <button type="button" class="list-group-item list-group-item-action" disabled>Tema5</button>
+    </div>
+
+</div>
